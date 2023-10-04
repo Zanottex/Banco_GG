@@ -26,17 +26,13 @@ public class S_Pessoa {
         }
     }
 
-    public static M_Resposta cadastrarPessoa(String nome, String cpf, String email, String telefone, String data_nasc, String senha, String confsenha) {
+    public static M_Resposta cadastrarPessoa(String nome, String cpf, String email, String telefone, String datanasc, String senha) {
 
         boolean cadastrovalido = true;
         String mensagemRetorno = "";
         telefone = S_NumberCleaner.cleanerNumber(telefone);
         if (telefone.equals("")) {
             telefone = null;
-        }
-        if (!senha.equals(confsenha)) {
-            mensagemRetorno += "A senha e a confirmação de senha devem ser iguais.<br/>";
-            cadastrovalido = false;
         }
         if (!S_CpfValidator.validateCPF(cpf)) {
             mensagemRetorno += "CPF inválido.<br/>";
@@ -60,7 +56,7 @@ public class S_Pessoa {
                 m_pessoa.setTelefone(null);
             }
             m_pessoa.setEmail(email);
-            m_pessoa.setData_nasc(LocalDate.parse(data_nasc));
+            m_pessoa.setData_nasc(LocalDate.parse(datanasc));
             m_pessoa.setSenha(senha);
             try {
                 r_pessoa.save(m_pessoa);

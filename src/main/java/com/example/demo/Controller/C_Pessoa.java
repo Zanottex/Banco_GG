@@ -24,15 +24,15 @@ public class C_Pessoa {
                                   @RequestParam("email") String email,
                                   @RequestParam("telefone") String telefone,
                                   @RequestParam("data_nasc") String data_nasc,
-                                  @RequestParam("senha") String senha,
-                                  @RequestParam("confsenha") String confsenha
+                                  @RequestParam("senha") String senha
+
     ){
-        return S_Pessoa.cadastrarPessoa(nome, cpf, email, telefone, data_nasc, senha, confsenha);
+        return S_Pessoa.cadastrarPessoa(nome, cpf, email, telefone, data_nasc, senha);
     }
 
     @GetMapping("/")
     public String getLogin(){
-        return "Login/Login";
+        return "Cadastrar/Usuario";
     }
 
     @PostMapping("/")
@@ -43,7 +43,7 @@ public class C_Pessoa {
         M_Pessoa pessoa = new M_Pessoa();
         session.setAttribute("usuario", pessoa);
         if(session.getAttribute("usuario") == null){
-            return "Login/Login";
+            return "Cadastrar/Usuario";
         }else{
             redirectAttributes.addFlashAttribute("nome", pessoa.getNome());
             return "redirect:/Home";

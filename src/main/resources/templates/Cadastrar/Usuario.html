@@ -11,57 +11,53 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../CSS/Cadastro_Usuario.css">
-    <script src="../../JS/Cadastro_Usuario.js" defer></script>
+    <script src="JS/Cadastro_Usuario.js" defer></script>
     <title>Cadastrar</title>
 </head>
 
 <body>
 <div class="container" id="container">
     <div class="content1  sign-in-container">
-        <form class="login">
-            <h2 class="tituloForm1">Login</h2>
-            <p class="texto">Ou faça o login com os dados criados aqui</p>
-            <label class="label-input">
-                <i class="far fa-envelope icon-modificado"></i>
-                <input type="text" id="cpfLogar"placeholder="CPF">
-            </label>
-            <label class="label-input">
-                <i class="fas fa-lock icon-modificado"></i>
-                <input type="password" id="senhaLogar" placeholder="Senha">
-            </label>
-            <button class="btn btnLogin1" id="enviarLogin">Login</button>
-        </form>
+        <h2 class="tituloForm1">Login</h2>
+        <p class="texto">Ou faça o login com os dados criados aqui</p>
+        <label class="label-input">
+            <i class="far fa-envelope icon-modificado"></i>
+            <input type="text" id="cpfLogar"placeholder="CPF">
+        </label>
+        <label class="label-input">
+            <i class="fas fa-lock icon-modificado"></i>
+            <input type="password" id="senhaLogar" placeholder="Senha">
+        </label>
+        <button class="btn btnLogin1" id="enviarLogin" type="submit">Login</button>
     </div>
     <div class="content1 sign-up-container">
-        <form class="login">
-            <h2 class="tituloForm2">Crie sua Conta</h2>
-            <p class="texto">Crie use seu e-mail para se cadastrar</p>
-            <label class="label-input">
-                <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Nome">
-            </label>
-            <label class="label-input">
-                <i class="fa-regular fa-envelope"></i>
-                <input type="text" placeholder="E-mail">
-            </label>
-            <label class="label-input">
-                <i class="fa-solid fa-passport"></i>
-                <input type="text" placeholder="CPF">
-            </label>
-            <label class="label-input">
-                <i class="fa-solid fa-phone"></i>
-                <input type="text" placeholder="Telefone">
-            </label>
-            <label class="label-input">
-                <i class="fa-solid fa-calendar-days"></i>
-                <input type="date" placeholder="Data de Nascimento">
-            </label>
-            <label class="label-input">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Senha">
-            </label>
-            <button id="enviarCadastro" class="btn btnCadastro1">Cadastrar</button>
-        </form>
+        <h2 class="tituloForm2">Crie sua Conta</h2>
+        <p class="texto">Crie use seu e-mail para se cadastrar</p>
+        <label class="label-input">
+            <i class="fa-solid fa-user"></i>
+            <input id="nome" type="text" placeholder="Nome">
+        </label>
+        <label class="label-input">
+            <i class="fa-regular fa-envelope"></i>
+            <input id="email" type="text" placeholder="E-mail">
+        </label>
+        <label class="label-input">
+            <i class="fa-solid fa-passport"></i>
+            <input id="cpf" type="text" placeholder="CPF">
+        </label>
+        <label class="label-input">
+            <i class="fa-solid fa-phone"></i>
+            <input id="telefone" type="text" placeholder="Telefone">
+        </label>
+        <label class="label-input">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input id="datanasc" type="date" placeholder="Data de Nascimento">
+        </label>
+        <label class="label-input">
+            <i class="fa-solid fa-lock"></i>
+            <input id="senha" type="password" placeholder="Senha">
+        </label>
+        <button class="btn btnCadastro1" id="enviarCadastro" type="submit">Cadastrar</button>
     </div>
 
     <div class="overlay-container">

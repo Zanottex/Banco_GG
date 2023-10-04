@@ -14,9 +14,17 @@ public class M_Pessoa {
     private String nome;
     private String email;
     private Long cpf;
-    private LocalDate data_nasc;
+    private LocalDate data_nasc;""
     private Long telefone;
     private String senha;
+    private Long dinheiro;
+
+    public Long getDinheiro() {
+        return dinheiro;
+    }
+    public void setDinheiro(Long dinheiro) {
+        this.dinheiro = dinheiro;
+    }
 
     public Long getId() {
         return id;
